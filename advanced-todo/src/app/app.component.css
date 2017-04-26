@@ -131,12 +131,31 @@
   width: 100%;
   border-radius: 2px;
   outline: none;
-  border: thin solid rgba(0, 0, 0, 0.87);
+  border: thin solid rgba(0, 0, 0, 0.54);
   padding: 0 8px;
 }
 
 .left-nav-input:focus {
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.54);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.38);
+}
+
+.search-group {
+  position: relative;
+}
+
+.search-group input {
+  padding-left: 48px;
+}
+
+.search-group::after {
+  content: '\26B2';
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  top: calc((100% - 29px) / 2);
+  left: 16px;
+  position: absolute;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.54);
 }
 
 .touchable-target {
