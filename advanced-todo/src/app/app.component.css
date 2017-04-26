@@ -133,6 +133,7 @@
   outline: none;
   border: thin solid rgba(0, 0, 0, 0.54);
   padding: 0 8px;
+  transition: box-shadow 250ms;
 }
 
 .left-nav-input:focus {
