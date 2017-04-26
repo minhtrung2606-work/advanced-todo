@@ -1,0 +1,89 @@
+/*
+  24.00dp	= 18.00px ldpi
+  15.00dp = 11.25px
+*/
+
+.primary-bg-color {
+  background-color: #009688;
+}
+
+.primary-color {
+  color: #ffffff;
+}
+
+.container {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.flex-container {
+  display: flex;
+  align-items: stretch;;
+}
+
+.flex-container.vertical-center-alignment {
+  align-items: center;
+}
+
+.auto-margin-left {
+  margin-left: auto;
+}
+
+.touchable-target {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.ghost-button {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  border: thin solid #ffffff;
+  color: #ffffff;
+  padding: 0 16px;
+  border-radius: 2px;
+  position: relative;
+  transition: box-shadow 250ms;
+}
+
+.ghost-button.disabled {
+  cursor: not-allowed;
+}
+
+.ghost-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #ffffff;
+}
+
+.header {
+  height: 64px;
+  top: 0;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.sub-heading {
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
