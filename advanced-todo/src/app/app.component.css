@@ -17,6 +17,7 @@
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  width: 100%;
 }
 
 .flex-container {
@@ -48,6 +49,7 @@
   border-radius: 2px;
   position: relative;
   transition: box-shadow 250ms;
+  box-shadow: 0 0 0 1px #ffffff;
 }
 
 .ghost-button.disabled {
@@ -56,7 +58,7 @@
 
 .ghost-button:hover {
   cursor: pointer;
-  box-shadow: 0 0 0 1px #ffffff;
+  box-shadow: 0 0 0 2px #ffffff;
 }
 
 .header {
