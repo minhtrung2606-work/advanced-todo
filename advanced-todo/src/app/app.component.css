@@ -120,9 +120,15 @@
 .circle-checkbox {
   width: 40px;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0.54);
+  background-color: rgba(0, 0, 0, 0.38);
   border-radius: 100%;
   position: relative;
+  transition: box-shadow 250ms;
+}
+
+.circle-checkbox:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.38);
 }
 
 .circle-checkbox .check-mark {
@@ -131,6 +137,11 @@
 
 .circle-checkbox.checked {
   background-color: #009688;
+}
+
+.circle-checkbox.checked:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #009688;
 }
 
 .circle-checkbox.checked .check-mark {
@@ -148,6 +159,10 @@
 .left-nav .content-list-item {
   width: calc(100% - 56px);
   height: 100%;
+}
+
+.left-nav .content-list-item:hover {
+  cursor: pointer;
 }
 
 .left-nav-input {
