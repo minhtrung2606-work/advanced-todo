@@ -23,6 +23,14 @@
   color: rgba(0, 0, 0, 0.54);
 }
 
+.full-height {
+  height: 100vh;
+}
+
+.full-height.with-header {
+  height: calc(100vh - 64px);
+}
+
 .container {
   position: relative;
   padding-right: 15px;
