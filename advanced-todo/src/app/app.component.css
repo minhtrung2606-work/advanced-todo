@@ -77,12 +77,18 @@
 }
 
 .left-nav.with-border-right {
-  border-right: thin solid rgba(0, 0, 0, 0.38);
+  border-right: thin solid rgba(0, 0, 0, 0.12);
+  width: 255px;
 }
 
 .left-nav-header,
 .left-nav-footer {
   height: 56px;
+}
+
+.left-nav-footer.with-top-divider {
+  height: 55px;
+  border-top: thin solid rgba(0, 0, 0, 0.12);
 }
 
 .left-nav-container {
@@ -195,7 +201,7 @@
 }
 
 .ghost-button.without-border {
-  border-color: transparent; 
+  border-color: transparent;
 }
 
 .ghost-button.in-dark-bg {
