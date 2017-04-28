@@ -35,6 +35,18 @@
   height: 100%;
 }
 
+.float-left {
+  float: left;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-width.with-left-nav {
+  width: calc(100% - 256px);
+}
+
 .container {
   position: relative;
   padding-right: 15px;
@@ -72,13 +84,14 @@
 
 .left-nav {
   max-width: 300px;
-  width: 256px;
+  width: 224px;
   padding: 0 16px;
+  position: fixed;
 }
 
 .left-nav.with-right-divider {
   border-right: thin solid rgba(0, 0, 0, 0.12);
-  width: 255px;
+  width: 223px;
 }
 
 .left-nav-header,
@@ -151,12 +164,12 @@
   animation-delay: 100ms;
 }
 
-.left-nav .left-aligned-list-item {
+.left-aligned-list-item {
   width: 56px;
   height: 100%;
 }
 
-.left-nav .content-list-item {
+.content-list-item {
   width: calc(100% - 56px);
   height: 100%;
 }
@@ -266,7 +279,42 @@
 }
 
 .main-content {
-  padding-left: 24px;
+  padding-left: 72px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-right: 16px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.main-content.full-width.with-left-nav {
+  width: calc(100% - 256px - 72px - 16px);
+  margin-left: 256px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group > label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-group p {
+  margin-top: 0px;
+}
+
+.form-group-container .form-group:last-child {
+  margin-bottom: 0;
+}
+
+.y-scrollable {
+  overflow-y: auto;
+}
+
+.detail-content .title {
+  font-size: 32px;
 }
 
 @keyframes checkbox-checked-font-size {
