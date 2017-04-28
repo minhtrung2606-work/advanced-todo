@@ -305,6 +305,12 @@
   margin-top: 0px;
 }
 
+.form-group p.with-border {
+  padding: 24px 16px;
+  border: thin solid rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+}
+
 .form-group-container .form-group:last-child {
   margin-bottom: 0;
 }
@@ -315,6 +321,14 @@
 
 .detail-content .title {
   font-size: 32px;
+}
+
+.form-group.button-bar .button {
+  margin-right: 4px;
+}
+
+.form-group.button-bar .button:last-child {
+  margin-right: 0;
 }
 
 @keyframes checkbox-checked-font-size {
