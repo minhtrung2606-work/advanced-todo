@@ -18,15 +18,6 @@ export class TodoItemDetailComponent implements OnInit {
     ;
   }
 
-  // TODO: This snippet of code is duplicated with the one in TodoItem component
-  toggleDone(todoItem: TodoItem): void {
-    if (todoItem.isDone()) {
-      todoItem.markUndone();
-    } else {
-      todoItem.markDone();
-    }
-  }
-
   ngOnInit() {
   }
 

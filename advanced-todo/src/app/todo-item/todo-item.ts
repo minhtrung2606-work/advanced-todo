@@ -30,6 +30,15 @@ export class TodoItem {
     return this;
   }
 
+  toggleDone():TodoItem {
+    if (this.done) {
+      this.markUndone();
+    } else {
+      this.markDone();
+    }
+    return this;
+  }
+
   setTitle(title:String):TodoItem {
     this.title = title;
     return this;
