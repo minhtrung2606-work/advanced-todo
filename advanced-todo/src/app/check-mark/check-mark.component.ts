@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'check-mark',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckMarkComponent implements OnInit {
   abstract;
+
+  @Input()
+  public checked:Boolean;
 
   constructor() { }
 

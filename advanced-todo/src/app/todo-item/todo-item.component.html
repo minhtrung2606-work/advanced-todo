@@ -1,6 +1,6 @@
 <div class="left-nav-list-item todo-item flex-container">
   <div class="left-aligned-list-item flex-container horizontal-center-alignment">
-    <check-mark></check-mark>
+    <check-mark [checked]="todoItem.isDone()" (click)="toggleDone(todoItem)"></check-mark>
   </div>
   <div class="content-list-item flex-container horizontal-center-alignment">
     <div class="primary-text-color full-width">
