@@ -10,25 +10,24 @@ export class TodoItem {
     this.done = false;
     this.title = title || '';
     this.desc = desc || '';
+    this.creationDate = new Date().getTime();
   }
 
   isDone():Boolean {
     return this.done;
   }
 
-  complete(): TodoItem {
+  markDone(): TodoItem {
     this.done = true;
+    this.doneDate = new Date().getTime();
+    this.updateDate = new Date().getTime();
     return this;
   }
 
-  incomplete():TodoItem {
+  markUndone():TodoItem {
     this.done = false;
+    this.updateDate = new Date().getTime();
     return this;
-  }
-
-  toggleDone():Boolean {
-    this.done = !this.done;
-    return this.done;
   }
 
   setTitle(title:String):TodoItem {
@@ -54,13 +53,25 @@ export class TodoItem {
     return this;
   }
 
+  getCreationDate():Number {
+    return this.creationDate;
+  }
+
   setUpdateDate(updateDate:Number):TodoItem {
     this.updateDate = updateDate;
     return this;
   }
 
+  getUpdateDate():Number {
+    return this.updateDate;
+  }
+
   setDoneDate(doneDate:Number):TodoItem {
     this.doneDate = doneDate;
     return this;
+  }
+
+  getDoneDate():Number {
+    return this.doneDate;
   }
 }

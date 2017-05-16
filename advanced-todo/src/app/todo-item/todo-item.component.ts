@@ -22,7 +22,11 @@ export class TodoItemComponent implements OnInit {
   ngOnInit() { }
 
   toggleDone(todoItem: TodoItem): void {
-    todoItem.toggleDone();
+    if (todoItem.isDone()) {
+      todoItem.markUndone();
+    } else {
+      todoItem.markDone();
+    }
     this.onDone.emit(todoItem);
   }
 
