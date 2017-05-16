@@ -21,7 +21,7 @@
           <input class="left-nav-input" placeholder="FIND TODO..." />
         </div>
         <div class="left-nav-container">
-          <todo-item [todoItem]="todoItem"></todo-item>
+          <todo-item [todoItem]="todoItem" (onTick)="onTickTodoItem($event)"></todo-item>
           <!--<div class="todo-item-divider"></div>-->
           <!--<div class="left-nav-list-item todo-item done flex-container">-->
             <!--<div class="left-aligned-list-item flex-container horizontal-center-alignment">-->

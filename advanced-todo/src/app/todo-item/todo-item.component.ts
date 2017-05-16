@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TodoItem } from './todo-item';
 
 @Component({
@@ -12,7 +12,12 @@ export class TodoItemComponent implements OnInit {
   @Input()
   public todoItem:TodoItem;
 
-  constructor() {}
+  @Output()
+  public onTick:EventEmitter<TodoItem>;
+
+  constructor() {
+    this.onTick = new EventEmitter();
+  }
 
   ngOnInit() {
     if (!this.todoItem) {
@@ -20,6 +25,10 @@ export class TodoItemComponent implements OnInit {
     } else {
       console.log('<todo-item>: TODO item already passed in');
     }
+  }
+
+  onTodoItemClick(todoItem: TodoItem): void {
+    this.onTick.emit(todoItem);
   }
 
 }

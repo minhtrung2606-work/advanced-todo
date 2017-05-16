@@ -1,7 +1,8 @@
 <div class="left-nav-list-item todo-item flex-container">
   <div class="left-aligned-list-item flex-container horizontal-center-alignment">
     <div class="circle-checkbox flex-container horizontal-center-alignment vertical-center-alignment"
-      [ngClass]="{'checked':todoItem.isDone()}">
+      [ngClass]="{'checked':todoItem.isDone()}"
+      (click)="onTodoItemClick(todoItem)">
       <span class="check-mark">&#x2713;</span>
     </div>
   </div>

@@ -2,9 +2,9 @@ export class TodoItem {
   private done:Boolean;
   private title:String;
   private desc:String;
-  private creationDate:Date;
-  private updateDate:Date;
-  private doneDate:Date;
+  private creationDate:Number;
+  private updateDate:Number;
+  private doneDate:Number;
 
   constructor(title:String, desc:String) {
     this.done = false;
@@ -36,17 +36,17 @@ export class TodoItem {
     return this;
   }
 
-  setCreationDate(creationDate:Date):TodoItem {
+  setCreationDate(creationDate:Number):TodoItem {
     this.creationDate = creationDate;
     return this;
   }
 
-  setUpdateDate(updateDate:Date):TodoItem {
+  setUpdateDate(updateDate:Number):TodoItem {
     this.updateDate = updateDate;
     return this;
   }
 
-  setDoneDate(doneDate:Date):TodoItem {
+  setDoneDate(doneDate:Number):TodoItem {
     this.doneDate = doneDate;
     return this;
   }
