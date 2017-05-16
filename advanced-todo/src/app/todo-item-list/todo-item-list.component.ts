@@ -17,8 +17,12 @@ export class TodoItemListComponent implements OnInit {
   @Output()
   public onDone:EventEmitter<TodoItem>;
 
+  @Output()
+  public onSelected:EventEmitter<TodoItem>;
+
   constructor() {
     this.onDone = new EventEmitter();
+    this.onSelected = new EventEmitter();
   }
 
   ngOnInit() {
@@ -47,6 +51,7 @@ export class TodoItemListComponent implements OnInit {
 
   onTodoItemClick(todoItem):void {
     this.currentTodoItem = todoItem;
+    this.onSelected.emit(todoItem);
   }
 
 }

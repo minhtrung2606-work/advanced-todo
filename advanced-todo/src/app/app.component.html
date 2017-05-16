@@ -22,7 +22,8 @@
         </div>
         <todo-item-list
           [todoItemList]="todoItemList"
-          (onDone)="onTodoItemDone($event)"></todo-item-list>
+          (onDone)="onTodoItemDone($event)"
+          (onSelected)="onTodoItemSelected($event)"></todo-item-list>
         <div class="left-nav-footer with-top-divider">
           <div class="pagination full-height flex-container vertical-center-alignment horizontal-center-alignment">
             <span class="ghost-button without-border"><<</span>
@@ -34,7 +35,7 @@
         </div>
       </div>
       <div class="main-content full-width with-left-nav">
-        <todo-item-detail></todo-item-detail>
+        <todo-item-detail [todoItem]="todoItem"></todo-item-detail>
       </div>
     </div>
   </div>

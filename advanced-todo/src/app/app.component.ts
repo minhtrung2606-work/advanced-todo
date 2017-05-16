@@ -8,6 +8,7 @@ import { TodoItem } from './todo-item/todo-item';
 })
 export class AppComponent {
   private todoItemList:Array<TodoItem>;
+  private todoItem;
 
   constructor() {
     this.todoItemList = [];
@@ -25,5 +26,9 @@ export class AppComponent {
     } else {
       window.alert('Oops. Something wrong with TODO task ' + todoItem.getTitle() + ' to be undone');
     }
+  }
+
+  onTodoItemSelected(todoItem:TodoItem):void {
+    this.todoItem = todoItem;
   }
 }
