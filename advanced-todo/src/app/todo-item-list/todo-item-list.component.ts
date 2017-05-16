@@ -20,4 +20,8 @@ export class TodoItemListComponent implements OnInit {
     todoItem.toggleDone();
   }
 
+  isEmptyList():Boolean {
+    return !!this.todoItemList || this.todoItemList.length === 0;
+  }
+
 }
