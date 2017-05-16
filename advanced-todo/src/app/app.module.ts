@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoItemListComponent } from './todo-item-list/todo-item-list.component';
 import { TodoItemDetailComponent } from './todo-item-detail/todo-item-detail.component';
+import { CheckMarkComponent } from './check-mark/check-mark.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoItemComponent,
     TodoItemListComponent,
-    TodoItemDetailComponent
+    TodoItemDetailComponent,
+    CheckMarkComponent
   ],
   imports: [
     BrowserModule,
