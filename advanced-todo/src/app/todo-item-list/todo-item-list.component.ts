@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TodoItem } from './../todo-item/todo-item';
 
 @Component({
@@ -12,7 +12,12 @@ export class TodoItemListComponent implements OnInit {
   @Input()
   public todoItemList:Array<TodoItem>;
 
-  constructor() { }
+  @Output()
+  public onDone:EventEmitter<TodoItem>;
+
+  constructor() {
+    this.onDone = new EventEmitter();
+  }
 
   ngOnInit() {
     if (!this.todoItemList) {
@@ -26,11 +31,7 @@ export class TodoItemListComponent implements OnInit {
 
   onTodoItemDone(todoItem:TodoItem): void {
     if (todoItem) {
-      if (todoItem.isDone()) {
-        window.alert('You\'ve recently complete a TODO task');
-      } else {
-        window.alert('Oops. Something wrong with this TODO task to be undone');
-      }
+      this.onDone.emit(todoItem);
     }
   }
 

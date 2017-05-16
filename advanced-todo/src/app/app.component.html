@@ -20,7 +20,9 @@
         <div class="left-nav-header flex-container hv-center-alignment search-group">
           <input class="left-nav-input" placeholder="FIND TODO..." />
         </div>
-        <todo-item-list [todoItemList]="todoItemList"></todo-item-list>
+        <todo-item-list
+          [todoItemList]="todoItemList"
+          (onDone)="onTodoItemDone($event)"></todo-item-list>
         <div class="left-nav-footer with-top-divider">
           <div class="pagination full-height flex-container vertical-center-alignment horizontal-center-alignment">
             <span class="ghost-button without-border"><<</span>
