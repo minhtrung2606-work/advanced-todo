@@ -36,9 +36,17 @@ export class TodoItem {
     return this;
   }
 
+  getTitle():String {
+    return this.title;
+  }
+
   setDescription(desc:String):TodoItem {
     this.desc = desc;
     return this;
+  }
+
+  getDescription(): String {
+    return this.desc;
   }
 
   setCreationDate(creationDate:Number):TodoItem {
