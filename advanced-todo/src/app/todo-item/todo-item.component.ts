@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, HostBinding } from '@angular/core';
 import { TodoItem } from './todo-item';
 
 @Component({
@@ -8,6 +8,8 @@ import { TodoItem } from './todo-item';
 })
 export class TodoItemComponent implements OnInit {
   abstract;
+
+  @HostBinding('attr.class') cssClass = 'todo-item-wrapper';
 
   @Input()
   public todoItem:TodoItem;

@@ -115,6 +115,11 @@
 }
 
 .todo-item {
+  padding: 8px;
+}
+
+.todo-item.selected {
+  background-color: #cbcdd0;
 }
 
 .todo-item.done .content-list-item {
