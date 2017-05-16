@@ -1,4 +1,4 @@
-<div class="left-nav-list-item todo-item flex-container">
+<div class="left-nav-list-item todo-item flex-container" [ngClass]="{'done':todoItem.isDone()}">
   <div class="left-aligned-list-item flex-container horizontal-center-alignment">
     <check-mark [checked]="todoItem.isDone()" (click)="todoItem.toggleDone()"></check-mark>
   </div>
