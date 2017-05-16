@@ -9,6 +9,8 @@ import { TodoItem } from './../todo-item/todo-item';
 export class TodoItemListComponent implements OnInit {
   abstract;
 
+  private currentTodoItem:TodoItem;
+
   @Input()
   public todoItemList:Array<TodoItem>;
 
@@ -37,6 +39,14 @@ export class TodoItemListComponent implements OnInit {
 
   isTheLastItem(index:Number):Boolean {
     return index === this.todoItemList.length - 1;
+  }
+
+  isSelected(todoItem:TodoItem): Boolean {
+    return this.currentTodoItem && this.currentTodoItem.equals(todoItem);
+  }
+
+  onTodoItemClick(todoItem):void {
+    this.currentTodoItem = todoItem;
   }
 
 }

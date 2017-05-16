@@ -13,6 +13,10 @@ export class TodoItem {
     this.creationDate = new Date().getTime();
   }
 
+  equals(todoItem:TodoItem):Boolean {
+    return todoItem && todoItem.getTitle() === this.getTitle() && todoItem.getDescription() === this.getDescription();
+  }
+
   isDone():Boolean {
     return this.done;
   }

@@ -2,7 +2,9 @@
   <div *ngFor="let todoItem of todoItemList; let index = index">
     <todo-item
       [todoItem]="todoItem"
-      (onDone)="onTodoItemDone($event)"></todo-item>
+      (onDone)="onTodoItemDone($event)"
+      [ngClass]="{'selected':isSelected(todoItem)}"
+      (click)="onTodoItemClick(todoItem)"></todo-item>
     <div class="todo-item-divider" *ngIf="!isTheLastItem(index)"></div>
   </div>
 
