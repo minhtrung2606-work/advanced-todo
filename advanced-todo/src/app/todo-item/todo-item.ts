@@ -26,6 +26,11 @@ export class TodoItem {
     return this;
   }
 
+  toggleDone():Boolean {
+    this.done = !this.done;
+    return this.done;
+  }
+
   setTitle(title:String):TodoItem {
     this.title = title;
     return this;

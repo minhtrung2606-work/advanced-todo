@@ -19,10 +19,6 @@ export class AppComponent {
   }
 
   onTickTodoItem(todoItem: TodoItem): void {
-    if (todoItem.isDone()) {
-      todoItem.incomplete();
-    } else {
-      todoItem.complete();
-    }
+    todoItem.toggleDone();
   }
 }
