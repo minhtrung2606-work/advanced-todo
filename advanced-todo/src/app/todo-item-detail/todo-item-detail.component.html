@@ -1,39 +1,44 @@
 <div>
-  <header class="detail-content">
-    <div class="left-nav-list-item todo-item flex-container">
-      <check-mark [checked]="todoItem.isDone()" (click)="todoItem.toggleDone()"></check-mark>
-      <div class="content-list-item flex-container horizontal-center-alignment">
-        <div class="primary-text-color">
-          <div class="title primary-color">
-            {{todoItem.getTitle()}}
+  <div *ngIf="showDetail()">
+    <header class="detail-content">
+      <div class="left-nav-list-item todo-item flex-container">
+        <check-mark [checked]="todoItem.isDone()" (click)="todoItem.toggleDone()"></check-mark>
+        <div class="content-list-item flex-container horizontal-center-alignment">
+          <div class="primary-text-color">
+            <div class="title primary-color">
+              {{todoItem.getTitle()}}
+            </div>
           </div>
         </div>
       </div>
+    </header>
+    <div class="form-group-container">
+      <div class="form-group">
+        <label>Description</label>
+        <p class="with-border">
+          {{todoItem.getDescription()}}
+        </p>
+      </div>
+      <div class="form-group">
+        <label>Created Date</label>
+        <div>{{todoItem.getCreationDate()}}</div>
+      </div>
+      <div class="form-group">
+        <label>Updated Date</label>
+        <div>{{todoItem.getUpdateDate()}}</div>
+      </div>
+      <div class="form-group">
+        <label>Done Date</label>
+        <div>{{todoItem.getDoneDate()}}</div>
+      </div>
+      <div class="form-group button-bar">
+        <span class="ghost-button button float-left" title="Mark this advanced TODO item as done">Finish This TODO</span>
+        <span class="ghost-button button float-left" title="Clone TODO item">Clone This TODO</span>
+        <div style="clear: both;"></div>
+      </div>
     </div>
-  </header>
-  <div class="form-group-container">
-    <div class="form-group">
-      <label>Description</label>
-      <p class="with-border">
-        {{todoItem.getDescription()}}
-      </p>
-    </div>
-    <div class="form-group">
-      <label>Created Date</label>
-      <div>{{todoItem.getCreationDate()}}</div>
-    </div>
-    <div class="form-group">
-      <label>Updated Date</label>
-      <div>{{todoItem.getUpdateDate()}}</div>
-    </div>
-    <div class="form-group">
-      <label>Done Date</label>
-      <div>{{todoItem.getDoneDate()}}</div>
-    </div>
-    <div class="form-group button-bar">
-      <span class="ghost-button button float-left" title="Mark this advanced TODO item as done">Finish This TODO</span>
-      <span class="ghost-button button float-left" title="Clone TODO item">Clone This TODO</span>
-      <div style="clear: both;"></div>
-    </div>
+  </div>
+  <div *ngIf="!showDetail()" class="sub-heading">
+    No TODO item selected to view detail
   </div>
 </div>
