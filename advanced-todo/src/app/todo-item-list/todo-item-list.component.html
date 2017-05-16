@@ -1,3 +1,59 @@
-<p>
-  todo-item-list works!
-</p>
+<div class="left-nav-container">
+  <todo-item
+    *ngFor="let todoItem of todoItemList"
+    [todoItem]="todoItem" (onTick)="onTickTodoItem($event)"></todo-item>
+  <!--<div class="todo-item-divider"></div>-->
+  <!--<div class="left-nav-list-item todo-item done flex-container">-->
+  <!--<div class="left-aligned-list-item flex-container horizontal-center-alignment">-->
+  <!--<div class="circle-checkbox checked flex-container horizontal-center-alignment vertical-center-alignment">-->
+  <!--<span class="check-mark">&#x2713;</span>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--<div class="content-list-item flex-container horizontal-center-alignment">-->
+  <!--<div class="primary-text-color">-->
+  <!--<div class="title">-->
+  <!--TODO #2-->
+  <!--</div>-->
+  <!--<div class="sub-heading">-->
+  <!--This is a TODO #2-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--<div class="todo-item-divider"></div>-->
+  <!--<div class="left-nav-list-item todo-item flex-container">-->
+  <!--<div class="left-aligned-list-item flex-container horizontal-center-alignment">-->
+  <!--<div class="circle-checkbox flex-container horizontal-center-alignment vertical-center-alignment">-->
+  <!--<span class="check-mark">&#x2713;</span>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--<div class="content-list-item flex-container horizontal-center-alignment">-->
+  <!--<div class="primary-text-color">-->
+  <!--<div class="title">-->
+  <!--TODO #3-->
+  <!--</div>-->
+  <!--<div class="sub-heading">-->
+  <!--This is a TODO #3-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--<div class="todo-item-divider"></div>-->
+  <!--<div class="left-nav-list-item todo-item flex-container">-->
+  <!--<div class="left-aligned-list-item flex-container horizontal-center-alignment">-->
+  <!--<div class="circle-checkbox flex-container horizontal-center-alignment vertical-center-alignment">-->
+  <!--<span class="check-mark">&#x2713;</span>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--<div class="content-list-item flex-container horizontal-center-alignment">-->
+  <!--<div class="primary-text-color">-->
+  <!--<div class="title">-->
+  <!--TODO #4-->
+  <!--</div>-->
+  <!--<div class="sub-heading">-->
+  <!--This is a TODO #4-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--</div>-->
+</div>
