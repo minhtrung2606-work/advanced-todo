@@ -27,7 +27,7 @@ export class TodoItemComponent implements OnInit {
     }
   }
 
-  onTodoItemClick(todoItem: TodoItem): void {
+  onTodoItemDoneClick(todoItem: TodoItem): void {
     this.onTick.emit(todoItem);
   }
 
