@@ -12,12 +12,12 @@ export class TodoItem {
     this.desc = desc || '';
   }
 
-  done(): TodoItem {
+  complete(): TodoItem {
     this.done = true;
     return this;
   }
 
-  undone():TodoItem {
+  incomplete():TodoItem {
     this.done = false;
     return this;
   }
