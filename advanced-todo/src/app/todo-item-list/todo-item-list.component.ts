@@ -14,14 +14,14 @@ export class TodoItemListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { }
-
-  onTick(todoItem: TodoItem): void {
-    todoItem.toggleDone();
+  ngOnInit() {
+    if (!this.todoItemList) {
+      this.todoItemList = [];
+    }
   }
 
   isEmptyList():Boolean {
-    return !!this.todoItemList || this.todoItemList.length === 0;
+    return this.todoItemList && this.todoItemList.length === 0;
   }
 
 }
