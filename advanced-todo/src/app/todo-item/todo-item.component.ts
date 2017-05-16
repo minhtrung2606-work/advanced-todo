@@ -12,13 +12,18 @@ export class TodoItemComponent implements OnInit {
   @Input()
   public todoItem:TodoItem;
 
+  @Output()
+  public onDone:EventEmitter<TodoItem>;
+
   constructor() {
+    this.onDone = new EventEmitter();
   }
 
   ngOnInit() { }
 
   toggleDone(todoItem: TodoItem): void {
     todoItem.toggleDone();
+    this.onDone.emit(todoItem);
   }
 
 }

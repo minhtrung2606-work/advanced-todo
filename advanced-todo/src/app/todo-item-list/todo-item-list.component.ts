@@ -24,4 +24,14 @@ export class TodoItemListComponent implements OnInit {
     return this.todoItemList && this.todoItemList.length === 0;
   }
 
+  onTodoItemDone(todoItem:TodoItem): void {
+    if (todoItem) {
+      if (todoItem.isDone()) {
+        window.alert('You\'ve recently complete a TODO task');
+      } else {
+        window.alert('Oops. Something wrong with this TODO task to be undone');
+      }
+    }
+  }
+
 }

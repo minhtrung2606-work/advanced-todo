@@ -1,7 +1,8 @@
 <div class="left-nav-container">
   <todo-item
     *ngFor="let todoItem of todoItemList"
-    [todoItem]="todoItem"></todo-item>
+    [todoItem]="todoItem"
+    (onDone)="onTodoItemDone($event)"></todo-item>
 
   <div *ngIf="isEmptyList()" class="sub-heading">
     TODO list empty
