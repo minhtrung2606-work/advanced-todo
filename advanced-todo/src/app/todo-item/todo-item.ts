@@ -12,6 +12,10 @@ export class TodoItem {
     this.desc = desc || '';
   }
 
+  isDone():Boolean {
+    return this.done;
+  }
+
   complete(): TodoItem {
     this.done = true;
     return this;

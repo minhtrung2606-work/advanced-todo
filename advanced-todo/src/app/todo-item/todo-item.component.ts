@@ -17,6 +17,8 @@ export class TodoItemComponent implements OnInit {
   ngOnInit() {
     if (!this.todoItem) {
       this.todoItem = new TodoItem('TODO #1', 'This is a TODO #1');
+    } else {
+      console.log('<todo-item>: TODO item already passed in');
     }
   }
 
