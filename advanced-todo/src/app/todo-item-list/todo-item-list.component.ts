@@ -35,4 +35,8 @@ export class TodoItemListComponent implements OnInit {
     }
   }
 
+  isTheLastItem(index:Number):Boolean {
+    return index === this.todoItemList.length - 1;
+  }
+
 }

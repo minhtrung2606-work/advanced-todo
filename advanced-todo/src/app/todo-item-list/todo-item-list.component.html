@@ -1,8 +1,10 @@
 <div class="left-nav-container">
-  <todo-item
-    *ngFor="let todoItem of todoItemList"
-    [todoItem]="todoItem"
-    (onDone)="onTodoItemDone($event)"></todo-item>
+  <div *ngFor="let todoItem of todoItemList; let index = index">
+    <todo-item
+      [todoItem]="todoItem"
+      (onDone)="onTodoItemDone($event)"></todo-item>
+    <div class="todo-item-divider" *ngIf="!isTheLastItem(index)"></div>
+  </div>
 
   <div *ngIf="isEmptyList()" class="sub-heading">
     TODO list empty

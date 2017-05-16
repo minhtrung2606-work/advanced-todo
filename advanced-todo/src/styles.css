@@ -118,7 +118,7 @@
   padding: 8px;
 }
 
-.todo-item.selected {
+.todo-item-wrapper.selected .todo-item {
   background-color: #cbcdd0;
 }
 
