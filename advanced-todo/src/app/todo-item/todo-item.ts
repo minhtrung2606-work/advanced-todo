@@ -22,15 +22,19 @@ export class TodoItem {
   }
 
   markDone(): TodoItem {
-    this.done = true;
-    this.doneDate = new Date().getTime();
-    this.updateDate = new Date().getTime();
+    if (!this.done) {
+      this.done = true;
+      this.doneDate = new Date().getTime();
+      this.updateDate = new Date().getTime();
+    }
     return this;
   }
 
   markUndone():TodoItem {
-    this.done = false;
-    this.updateDate = new Date().getTime();
+    if (this.done) {
+      this.done = false;
+      this.updateDate = new Date().getTime();
+    }
     return this;
   }
 
