@@ -120,6 +120,7 @@
 
 .todo-item-wrapper.selected .todo-item {
   background-color: #cbcdd0;
+  border-radius: 0.2rem;
 }
 
 .todo-item.done .content-list-item {
